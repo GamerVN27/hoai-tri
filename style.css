@@ -1,0 +1,247 @@
+/*
+ * BOOK REVIEW TEMPLATE: GIAO DIỆN CỔ ĐIỂN VÀ SANG TRỌNG (CLASSIC/SEPIA)
+ * Đã tối ưu hóa cho hiển thị Full Màn Hình và tăng cường chi tiết khung/họa tiết
+ */
+
+/* =========================================================================
+ * THIẾT LẬP CƠ BẢN VÀ NỀN (BODY)
+ * ========================================================================= */
+body {
+    /* Thiết lập font và màu cơ bản */
+    font-family: 'Merriweather', 'Garamond', 'Times New Roman', serif; /* Font Serif cổ điển */
+    background-color: #f7f3e8; /* Màu kem/giấy cũ */
+    color: #4b3832; /* Màu nâu đậm/mực */
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    /* Đảm bảo chiều cao tối thiểu bằng 100% viewport để full màn hình */
+    min-height: 100vh;
+    display: flex; /* Dùng flexbox để căn giữa nội dung theo chiều dọc (nếu cần) */
+    flex-direction: column;
+    
+    /* Họa tiết giấy cũ subtle (đã có, giữ lại và đảm bảo độ mờ) */
+    /* Đây là một họa tiết lặp lại để tạo cảm giác texture giấy */
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAZlBMVEUAAAD/gAD/kQD/lgD/mQD/mwD/ngD/oQD/ogD/owD/pQD/pgD/pwD/qQD/qwD/rQD/rwD/sQD/sgD/swD/tQD/tgD/twD/uAD/uQD/uwD/vAD/vQD/vwD/wAD/wQD/wwD/xAD/xQD/xwD/yAD/yQD/ywCLy/O5AAAAIHRSTlMAAQIDBAUGBwgJCwwNDxAREhMUFRYcHR4gISMtLi8w/W9rBQAAAAlwSFlzAAAWJQAAFiUAdcSiTwAAAGhJREFUSMft1MsOgDAIA9D6s6/QoYx/2bLqB7lYIPG5yRj2Y9yH50eD6wMv+Hj/TzX7Gg4Y5QY0xWgwGowGowE09hN8m58d3419Q/9hZt9y9h0eKz0eKz0eKz0ewgq7eQd/jS7XUjGfQy0AAAAASUVORK5CYII=');
+    background-repeat: repeat;
+}
+
+/* =========================================================================
+ * KHU VỰC NỘI DUNG CHÍNH (CONTAINER)
+ * ========================================================================= */
+.container {
+    max-width: 900px;
+    /* Margin rộng hơn, căn giữa, và cho phép nội dung cuộn nếu dài */
+    margin: 60px auto; 
+    padding: 50px;
+    background-color: #fcf9f2; /* Nền trắng kem nhạt */
+    
+    /* Bóng đổ cổ điển, hướng về một phía */
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.25); 
+    border-radius: 0; 
+    
+    /* KHUNG VIỀN MỚI: Tăng cường độ trang trọng với border đôi */
+    border: 3px solid #b8a68b; /* Khung viền ngoài màu nâu be */
+    outline: 2px solid #e8d8c3; /* Thêm outline để tạo viền đôi nhẹ nhàng */
+    outline-offset: -10px; /* Đẩy outline vào trong để tách biệt với border */
+    
+    flex-grow: 1; /* Cho phép container chiếm không gian còn lại (nếu dùng flexbox) */
+}
+
+/* =========================================================================
+ * HEADER (PHẦN TIÊU ĐỀ)
+ * ========================================================================= */
+header {
+    background-color: #e8d8c3; /* Màu be đậm hơn */
+    color: #4b3832;
+    padding: 40px 30px;
+    text-align: center;
+    
+    /* Đường viền đôi cổ điển, nổi bật */
+    border-bottom: 4px double #4b3832; 
+    border-top: 4px double #4b3832; /* Thêm border trên */
+
+    border-radius: 0;
+    /* Kéo dài header ra sát mép container */
+    margin: -40px -40px 30px -40px; 
+    
+    /* Họa tiết trang trí subtle cho header (có thể là dải màu) */
+    /* Có thể thêm 1 gradient mờ nếu muốn */
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif; 
+    margin: 0 0 5px 0;
+    font-size: 3.2em;
+    letter-spacing: 1px;
+    text-transform: uppercase; /* Tiêu đề chính viết hoa */
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5); /* Tạo hiệu ứng chữ in nổi nhẹ */
+}
+
+header h2 {
+    margin: 0;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.3em;
+    color: #8b6e51; 
+}
+
+/* =========================================================================
+ * TIÊU ĐỀ NỘI DUNG (H3)
+ * ========================================================================= */
+h3 {
+    color: #8b6e51; 
+    /* Đường viền đơn giản, ấm áp */
+    border-bottom: 2px solid #b8a68b; 
+    padding-bottom: 5px;
+    margin-top: 40px;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2em; /* Tăng kích thước H3 */
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+}
+
+/* =========================================================================
+ * PHẦN THÔNG TIN SÁCH
+ * ========================================================================= */
+.book-info {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+    align-items: flex-start;
+}
+
+.cover-image {
+    flex: 0 0 220px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3); /* Bóng đổ mạnh hơn */
+    border: 5px solid #ffffff; 
+    /* KHUNG VIỀN ẢNH: Thêm viền ngoài kép để tạo cảm giác khung tranh */
+    outline: 2px solid #b8a68b; 
+    outline-offset: 2px;
+    transition: box-shadow 0.3s ease;
+}
+
+.cover-image:hover {
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.4); /* Bóng đổ sâu hơn khi hover */
+}
+
+.cover-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+}
+
+.summary-text {
+    flex-grow: 1;
+    font-size: 1.05em;
+    text-align: justify; /* Căn đều hai bên cho cảm giác sách in */
+}
+
+/* =========================================================================
+ * NỘI DUNG CHUNG
+ * ========================================================================= */
+.personal-review p, .fun-facts ul {
+    font-size: 1.1em;
+    color: #4b3832;
+    text-align: justify; 
+}
+
+/* Chữ cái lớn đầu đoạn (Drop Cap) - Cổ điển */
+.summary-text p:first-of-type::first-letter {
+    float: left;
+    font-size: 4em;
+    line-height: 0.7;
+    padding-right: 8px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #8b6e51;
+}
+
+.fun-facts ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Dấu đầu dòng trang nhã */
+.fun-facts ul li:before {
+    content: '◈'; /* Sử dụng dấu hoa thị/hình thoi thay vì dấu chấm đơn giản */
+    color: #8b6e51;
+    font-weight: 900;
+    font-size: 1em;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+
+.fun-facts ul li {
+    margin-bottom: 10px;
+    padding-left: 1.5em;
+}
+
+.fun-facts ul li strong {
+    color: #4b3832;
+    font-weight: 700;
+}
+
+/* =========================================================================
+ * FOOTER (CHÂN TRANG)
+ * ========================================================================= */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #e8d8c3; 
+    color: #8b6e51;
+    font-size: 0.9em;
+    margin-top: 50px;
+    border-radius: 0;
+    /* Đường đứt nét cổ điển, nổi bật hơn */
+    border-top: 3px dashed #8b6e51; 
+}
+
+/* =========================================================================
+ * MEDIA QUERIES (RESPONSIVE)
+ * ========================================================================= */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+        /* Điều chỉnh outline-offset cho màn hình nhỏ */
+        outline-offset: -5px; 
+    }
+    
+    header {
+        margin: -20px -20px 20px -20px; 
+        padding: 30px 15px;
+    }
+
+    .book-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cover-image {
+        flex: none;
+        width: 70%;
+        max-width: 250px;
+        margin-bottom: 20px;
+    }
+
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    header h2 {
+        font-size: 1.1em;
+    }
+    
+    /* Bỏ hiệu ứng Drop Cap trên màn hình quá nhỏ để tránh làm vỡ layout */
+    .summary-text p:first-of-type::first-letter {
+        float: none;
+        font-size: 1em;
+        line-height: 1.7;
+        padding-right: 0;
+        color: inherit;
+    }
+}
