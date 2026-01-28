@@ -246,37 +246,58 @@ footer {
     }
 
 }
-video, audio {
+video,
+audio {
     display: block;
     width: 600px;
     max-width: 100%;
     margin: 0 auto 30px;
-    padding: 6px;
-    border-radius: 14px;
-    background:
-        linear-gradient(135deg,
-        #d4d4d4,
-        #f9f9f9,
-        #b8b8b8,
-        #ffffff,
-        #c0c0c0);
+    padding: 7px;
+
+    /* Bo mượt hơn */
+    border-radius: 16px;
+
+    /* Viền giả kim tinh tế */
+    background: linear-gradient(
+        135deg,
+        #e6e6e6 0%,
+        #ffffff 25%,
+        #c9c9c9 50%,
+        #ffffff 75%,
+        #d1d1d1 100%
+    );
+
+    /* Bóng nổi + ánh kim */
     box-shadow:
-        0 6px 15px rgba(0,0,0,0.25),
-        inset 0 0 3px rgba(255,255,255,0.8);
+        0 10px 25px rgba(0,0,0,0.28),
+        inset 0 1px 3px rgba(255,255,255,0.9),
+        inset 0 -1px 3px rgba(0,0,0,0.15);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* NỘI DUNG BÊN TRONG */
-video {
-    background-clip: padding-box;
+/* Hover nhẹ */
+video:hover,
+audio:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 14px 32px rgba(0,0,0,0.35),
+        inset 0 1px 4px rgba(255,255,255,1);
 }
 
+/* Nội dung bên trong */
+video,
 audio {
     background-clip: padding-box;
 }
+
+/* TIÊU ĐỀ AUDIO */
 .audio-title {
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
-    margin-bottom: 8px;
-    color: #333;
+    margin-bottom: 10px;
+    color: #2f2f2f;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.7);
 }
