@@ -273,3 +273,10 @@ video {
 audio {
     background-clip: padding-box;
 }
+.audio-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
